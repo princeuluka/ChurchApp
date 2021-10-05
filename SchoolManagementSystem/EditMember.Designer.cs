@@ -65,6 +65,8 @@ namespace SchoolManagementSystem
             this.button_Edit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +86,7 @@ namespace SchoolManagementSystem
             this.cmb_StateofOrigin.HoverState.Parent = this.cmb_StateofOrigin;
             this.cmb_StateofOrigin.ItemHeight = 30;
             this.cmb_StateofOrigin.ItemsAppearance.Parent = this.cmb_StateofOrigin;
-            this.cmb_StateofOrigin.Location = new System.Drawing.Point(121, 193);
+            this.cmb_StateofOrigin.Location = new System.Drawing.Point(121, 212);
             this.cmb_StateofOrigin.Name = "cmb_StateofOrigin";
             this.cmb_StateofOrigin.ShadowDecoration.Parent = this.cmb_StateofOrigin;
             this.cmb_StateofOrigin.Size = new System.Drawing.Size(228, 36);
@@ -194,7 +196,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPosition.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtPosition.Location = new System.Drawing.Point(102, 310);
+            this.txtPosition.Location = new System.Drawing.Point(102, 329);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(247, 23);
             this.txtPosition.TabIndex = 45;
@@ -206,7 +208,7 @@ namespace SchoolManagementSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label11.Location = new System.Drawing.Point(41, 313);
+            this.label11.Location = new System.Drawing.Point(41, 332);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 16);
             this.label11.TabIndex = 44;
@@ -216,7 +218,7 @@ namespace SchoolManagementSystem
             // 
             this.txt_doBap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_doBap.Location = new System.Drawing.Point(121, 235);
+            this.txt_doBap.Location = new System.Drawing.Point(121, 254);
             this.txt_doBap.Name = "txt_doBap";
             this.txt_doBap.Size = new System.Drawing.Size(228, 20);
             this.txt_doBap.TabIndex = 43;
@@ -228,7 +230,7 @@ namespace SchoolManagementSystem
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label10.Location = new System.Drawing.Point(6, 240);
+            this.label10.Location = new System.Drawing.Point(6, 259);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(118, 16);
             this.label10.TabIndex = 42;
@@ -241,7 +243,7 @@ namespace SchoolManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label9.Location = new System.Drawing.Point(6, 199);
+            this.label9.Location = new System.Drawing.Point(6, 218);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 16);
             this.label9.TabIndex = 40;
@@ -253,7 +255,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_MiddleName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MiddleName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txt_MiddleName.Location = new System.Drawing.Point(107, 70);
+            this.txt_MiddleName.Location = new System.Drawing.Point(107, 89);
             this.txt_MiddleName.Name = "txt_MiddleName";
             this.txt_MiddleName.Size = new System.Drawing.Size(242, 23);
             this.txt_MiddleName.TabIndex = 39;
@@ -265,7 +267,7 @@ namespace SchoolManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label8.Location = new System.Drawing.Point(5, 73);
+            this.label8.Location = new System.Drawing.Point(5, 92);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 16);
             this.label8.TabIndex = 38;
@@ -308,6 +310,7 @@ namespace SchoolManagementSystem
             this.button_Update.TabIndex = 35;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = false;
+            this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
             // txtPhone
             // 
@@ -315,7 +318,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtPhone.Location = new System.Drawing.Point(107, 275);
+            this.txtPhone.Location = new System.Drawing.Point(107, 294);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(242, 23);
             this.txtPhone.TabIndex = 34;
@@ -327,7 +330,7 @@ namespace SchoolManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label6.Location = new System.Drawing.Point(46, 278);
+            this.label6.Location = new System.Drawing.Point(46, 297);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 33;
@@ -351,10 +354,10 @@ namespace SchoolManagementSystem
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(81, 343);
+            this.txtAddress.Location = new System.Drawing.Point(81, 362);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(556, 50);
+            this.txtAddress.Size = new System.Drawing.Size(556, 32);
             this.txtAddress.TabIndex = 30;
             // 
             // label5
@@ -364,7 +367,7 @@ namespace SchoolManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(6, 346);
+            this.label5.Location = new System.Drawing.Point(6, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 29;
@@ -415,7 +418,7 @@ namespace SchoolManagementSystem
             // 
             this.txtdob.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtdob.Location = new System.Drawing.Point(105, 150);
+            this.txtdob.Location = new System.Drawing.Point(105, 169);
             this.txtdob.Name = "txtdob";
             this.txtdob.Size = new System.Drawing.Size(244, 20);
             this.txtdob.TabIndex = 25;
@@ -427,7 +430,7 @@ namespace SchoolManagementSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label3.Location = new System.Drawing.Point(6, 155);
+            this.label3.Location = new System.Drawing.Point(6, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 24;
@@ -439,7 +442,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLastName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtLastName.Location = new System.Drawing.Point(107, 112);
+            this.txtLastName.Location = new System.Drawing.Point(107, 131);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(242, 23);
             this.txtLastName.TabIndex = 23;
@@ -451,7 +454,7 @@ namespace SchoolManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(12, 115);
+            this.label2.Location = new System.Drawing.Point(12, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 22;
@@ -463,7 +466,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtfirstName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtfirstName.Location = new System.Drawing.Point(107, 25);
+            this.txtfirstName.Location = new System.Drawing.Point(107, 44);
             this.txtfirstName.Name = "txtfirstName";
             this.txtfirstName.Size = new System.Drawing.Size(242, 23);
             this.txtfirstName.TabIndex = 21;
@@ -475,7 +478,7 @@ namespace SchoolManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(12, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 20;
@@ -499,6 +502,8 @@ namespace SchoolManagementSystem
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.txtId);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.button_Edit);
             this.panel2.Controls.Add(this.cmb_StateofOrigin);
             this.panel2.Controls.Add(this.LabelChurch);
@@ -574,6 +579,30 @@ namespace SchoolManagementSystem
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // txtId
+            // 
+            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.txtId.Location = new System.Drawing.Point(107, 17);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(51, 23);
+            this.txtId.TabIndex = 55;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.label12.Location = new System.Drawing.Point(67, 18);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(29, 16);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "ID :";
+            // 
             // EditMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,5 +662,7 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_Edit;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label12;
     }
 }

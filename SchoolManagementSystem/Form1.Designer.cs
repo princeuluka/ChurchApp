@@ -54,10 +54,9 @@ namespace SchoolManagementSystem
             this.panel_Main = new System.Windows.Forms.Panel();
             this.panel_Cover = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label_FemaleStd = new System.Windows.Forms.Label();
             this.label_maleStd = new System.Windows.Forms.Label();
             this.label_TotalStd = new System.Windows.Forms.Label();
@@ -68,7 +67,6 @@ namespace SchoolManagementSystem
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_slide.SuspendLayout();
             this.panel_ScoreSubMenu.SuspendLayout();
             this.panel_CourseSubMenu.SuspendLayout();
@@ -77,10 +75,10 @@ namespace SchoolManagementSystem
             this.panel_Main.SuspendLayout();
             this.panel_Cover.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_slide
@@ -329,7 +327,7 @@ namespace SchoolManagementSystem
             this.button_StdManage.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button_StdManage.Size = new System.Drawing.Size(143, 40);
             this.button_StdManage.TabIndex = 1;
-            this.button_StdManage.Text = "Manage Student";
+            this.button_StdManage.Text = "Manage Member";
             this.button_StdManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_StdManage.UseVisualStyleBackColor = true;
             this.button_StdManage.Click += new System.EventHandler(this.button_StdManage_Click);
@@ -441,6 +439,20 @@ namespace SchoolManagementSystem
             this.panel2.Size = new System.Drawing.Size(787, 453);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox2.Image = global::SchoolManagementSystem.Properties.Resources._92576094_2429132050521202_5896389652390084608_n;
+            this.pictureBox2.Location = new System.Drawing.Point(-10, 42);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(794, 328);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
@@ -458,8 +470,6 @@ namespace SchoolManagementSystem
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Yellow;
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.label_FemaleStd);
             this.panel5.Controls.Add(this.label_maleStd);
             this.panel5.Controls.Add(this.label_TotalStd);
@@ -468,28 +478,6 @@ namespace SchoolManagementSystem
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(787, 67);
             this.panel5.TabIndex = 8;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(618, 43);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 17);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Female :";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(547, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 17);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Male :";
             // 
             // label_FemaleStd
             // 
@@ -592,20 +580,6 @@ namespace SchoolManagementSystem
             this.label15.TabIndex = 1;
             this.label15.Text = "UNITED EVANGELICAL CHURCH IGANMU";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Image = global::SchoolManagementSystem.Properties.Resources._92576094_2429132050521202_5896389652390084608_n;
-            this.pictureBox2.Location = new System.Drawing.Point(-10, 42);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(794, 328);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -629,13 +603,13 @@ namespace SchoolManagementSystem
             this.panel_Main.ResumeLayout(false);
             this.panel_Cover.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -670,8 +644,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label_FemaleStd;
         private System.Windows.Forms.Label label_maleStd;
         private System.Windows.Forms.Label label_TotalStd;

@@ -81,21 +81,29 @@ namespace SchoolManagementSystem
             return table;
         }
 
-        public bool UpdateMember(int id, string fname, string lname, DateTime bdate, string phone, string address, string gender, byte[] img)
+        public bool UpdateMember(int id, string fname, string Mname ,string lname, DateTime bdate, string phone, string address, string gender,string church, DateTime DOBP,string position, string state,string Soa, string Sint)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `student` SET " +
-                "`StdFirstName`=@fn,`StdLastName`=@ln,`BirthDate`=@bd,`Phone`=@ph," +
-                "`Address`=@adr,`Gender`=@gd,`Photo`=@img WHERE `stdid` = @id", connect.getConnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `members` SET " +
+                "`State` = @St,`superintendency`=@Si,`church` = @ch,`FirstName`=@fn,`MiddleName` = @Mn,`LastName`=@ln," +
+                "`DOB`=@bd,`Gender`=@gd,`StateOfOrigin` = @soa,`Address`=@adr,`DateOfBaptism` = @dop,`position` = @pos,`Phone`=@ph " +
+                "WHERE `members`.`MemberId` =@id", connect.getConnection);
 
+
+            command.Parameters.Add("@St", MySqlDbType.VarChar).Value = state;
+            command.Parameters.Add("@Si", MySqlDbType.VarChar).Value = Sint;
+            command.Parameters.Add("@ch", MySqlDbType.VarChar).Value = church;
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@Mn", MySqlDbType.VarChar).Value = Mname;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lname;
             command.Parameters.Add("@bd", MySqlDbType.Date).Value = bdate;
-            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = phone;
-            command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
             command.Parameters.Add("@gd", MySqlDbType.VarChar).Value = gender;
-            command.Parameters.Add("@img", MySqlDbType.Blob).Value = img;
-
+            command.Parameters.Add("@soa", MySqlDbType.VarChar).Value = Soa;
+            command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
+            command.Parameters.Add("@dop", MySqlDbType.Date).Value = DOBP;
+            command.Parameters.Add("@pos", MySqlDbType.VarChar).Value = position;
+            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = phone;
+  
             connect.openConnect();
             
 

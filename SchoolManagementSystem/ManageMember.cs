@@ -42,6 +42,11 @@ namespace SchoolManagementSystem
         {
             dataGridView_Members.DataSource = member.SearchMember(txtSearch.Text);
         }
+
+        private void ManageMember_Load(object sender, EventArgs e)
+        {
+
+        }
     } 
 }
      /*   bool Verify()

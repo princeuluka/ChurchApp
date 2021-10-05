@@ -23,7 +23,7 @@ namespace SchoolManagementSystem
 
         private void printStudent_Load(object sender, EventArgs e)
         {
-            showData(new MySqlCommand ("Select * from `student` ") );
+            showData(new MySqlCommand ("Select * from `members` ") );
         }
 
         public void showData(MySqlCommand command)
@@ -33,8 +33,8 @@ namespace SchoolManagementSystem
            // DataGridView_student.RowTemplate.Height = 80;
 
             DataGridView_student.DataSource = student.getList(command);
-            imageColumn = (DataGridViewImageColumn)DataGridView_student.Columns[7];
-            imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+          //  imageColumn = (DataGridViewImageColumn)DataGridView_student.Columns[7];
+          //  imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
         private void button_Search_Click(object sender, EventArgs e)
@@ -42,70 +42,32 @@ namespace SchoolManagementSystem
             string SelectQuery;
             if(radioButton_all.Checked == true)
             {
-                SelectQuery = "Select * from `student`";
+                SelectQuery = "Select * from `members`";
             }else if (radioButton_Male.Checked)
             {
-                SelectQuery = "Select * from `student` WHERE Gender = 'Male'";
+                SelectQuery = "Select * from `members` WHERE Gender = 'Male'";
             }else
             {
-                SelectQuery = "Select * from `student` WHERE Gender = 'Female'";
+                SelectQuery = "Select * from `members` WHERE Gender = 'Female'";
             }
             showData(new MySqlCommand(SelectQuery));
         }
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            printer.Title = "Mdemy Student List";
+            printer.Title = "Church List";
             printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
             printer.PorportionalColumns = true;
             printer.HeaderCellAlignment = StringAlignment.Near;
-            printer.Footer = "foxlearn";
+            printer.Footer = "UNITED EVANGELICAL CHURCH";
             printer.FooterSpacing = 15;
             printer.printDocument.DefaultPageSettings.Landscape = true;
             printer.PrintDataGridView(DataGridView_student);
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void radioButton_Female_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton_Male_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox_class_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView_student_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void radioButton_all_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
     }
 }

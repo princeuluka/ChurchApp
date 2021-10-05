@@ -106,7 +106,6 @@ namespace SchoolManagementSystem
             this.DataGridView_student.ThemeStyle.RowsStyle.Height = 80;
             this.DataGridView_student.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_student.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridView_student.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_student_CellContentClick);
             // 
             // panel3
             // 
@@ -117,7 +116,7 @@ namespace SchoolManagementSystem
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 10);
             this.panel3.TabIndex = 42;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+     
             // 
             // radioButton_Female
             // 
@@ -131,7 +130,6 @@ namespace SchoolManagementSystem
             this.radioButton_Female.TabIndex = 41;
             this.radioButton_Female.Text = "Female";
             this.radioButton_Female.UseVisualStyleBackColor = true;
-            this.radioButton_Female.CheckedChanged += new System.EventHandler(this.radioButton_Female_CheckedChanged);
             // 
             // radioButton_Male
             // 
@@ -145,7 +143,7 @@ namespace SchoolManagementSystem
             this.radioButton_Male.TabIndex = 40;
             this.radioButton_Male.Text = "Male";
             this.radioButton_Male.UseVisualStyleBackColor = true;
-            this.radioButton_Male.CheckedChanged += new System.EventHandler(this.radioButton_Male_CheckedChanged);
+          
             // 
             // label4
             // 
@@ -158,7 +156,7 @@ namespace SchoolManagementSystem
             this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 39;
             this.label4.Text = "Gender :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+           
             // 
             // comboBox_class
             // 
@@ -168,7 +166,7 @@ namespace SchoolManagementSystem
             this.comboBox_class.Name = "comboBox_class";
             this.comboBox_class.Size = new System.Drawing.Size(121, 21);
             this.comboBox_class.TabIndex = 43;
-            this.comboBox_class.SelectedIndexChanged += new System.EventHandler(this.comboBox_class_SelectedIndexChanged);
+         
             // 
             // label1
             // 
@@ -181,7 +179,7 @@ namespace SchoolManagementSystem
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 44;
             this.label1.Text = "Class :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // button_Print
             // 
@@ -212,7 +210,7 @@ namespace SchoolManagementSystem
             this.radioButton_all.TabStop = true;
             this.radioButton_all.Text = "All";
             this.radioButton_all.UseVisualStyleBackColor = true;
-            this.radioButton_all.CheckedChanged += new System.EventHandler(this.radioButton_all_CheckedChanged);
+            
             // 
             // button_Search
             // 
