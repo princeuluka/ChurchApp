@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         MemberClass Student = new MemberClass();
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             CustomizeDesign();

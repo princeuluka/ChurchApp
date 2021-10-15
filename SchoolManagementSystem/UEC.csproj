@@ -66,11 +66,11 @@
     <Compile Include="EditMember.Designer.cs">
       <DependentUpon>EditMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageCourse.cs">
       <SubType>Form</SubType>
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageCourse.resx">
       <DependentUpon>ManageCourse.cs</DependentUpon>
@@ -161,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\92576094_2429132050521202_5896389652390084608_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92576094_2429132050521202_5896389652390084608_n1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

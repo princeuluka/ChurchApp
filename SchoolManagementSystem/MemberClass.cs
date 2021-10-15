@@ -47,7 +47,7 @@ namespace SchoolManagementSystem
             adapter.Fill(table);
             return table;
         }
-
+        
         public string exeCount(string query)
         {
             MySqlCommand command = new MySqlCommand(query, connect.getConnection);
@@ -121,7 +121,7 @@ namespace SchoolManagementSystem
     
         public bool DeleteMember(int id)
         {
-            MySqlCommand command = new MySqlCommand("DELETE FROM `student` WHERE `Stdid` = @id", connect.getConnection);
+            MySqlCommand command = new MySqlCommand("DELETE FROM `members` WHERE `MemberId` = @id", connect.getConnection);
             command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             connect.openConnect();
             if (command.ExecuteNonQuery() == 1)

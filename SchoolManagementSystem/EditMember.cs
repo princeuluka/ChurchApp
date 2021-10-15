@@ -80,6 +80,9 @@ namespace SchoolManagementSystem
                     cmb_Superint.SelectedIndex = 0;
                     cmb_StateofOrigin.Items.Insert(0, dr["StateOfOrigin"].ToString());
                     cmb_StateofOrigin.SelectedIndex = 0;
+
+                    church_cmb.Items.Insert(0, dr["church"].ToString());
+                    church_cmb.SelectedIndex = 0;
                     if (gender == "Male")
                     {
                         radioButton_Female.Checked = false;

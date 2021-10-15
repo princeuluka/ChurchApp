@@ -18,7 +18,7 @@ namespace SchoolManagementSystem
             InitializeComponent();
         }
 
-        private void button_Add_Click(object sender, EventArgs e)
+     /* private void button_Add_Click(object sender, EventArgs e)
         {
             if (txtCoursename.Text == "" || txtHour.Text == "")
             {
@@ -57,19 +57,16 @@ namespace SchoolManagementSystem
             txtHour.Clear();
         }
 
-        public void showTable()
-        {
-            DataGridView_Course.DataSource = course.getCourseList();
-            //DataGridView_student.RowTemplate.Height = 80;
-            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-          //  imageColumn = (DataGridViewImageColumn)DataGridView_student.Columns[7];
-           // imageColumn.ImageLayout = DataGridViewImageCellLayout.Stretch;
-
-        }
-
+      
         private void CourseForm_Load(object sender, EventArgs e)
         {
             showTable();
         }
+
+        private void button_clear_Click_1(object sender, EventArgs e)
+        {
+
+        }
+     */
     }
 }

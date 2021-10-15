@@ -73,6 +73,16 @@ namespace SchoolManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _92576094_2429132050521202_5896389652390084608_n1 {
+            get {
+                object obj = ResourceManager.GetObject("92576094_2429132050521202_5896389652390084608_n1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_man_student_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-man-student-96", resourceCulture);
