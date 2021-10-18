@@ -27,7 +27,7 @@ namespace SchoolManagementSystem
 
         private void count()
         {
-            label_TotalStd.Text = "Total Students : " + Student.TotalMembers();
+            label_TotalStd.Text = "Total Members : " + Student.TotalMembers();
             label_maleStd.Text = "Male : " + Student.MaleStudent();
             label_FemaleStd.Text = "Female : " + Student.FemaleStudent();
         }
@@ -35,7 +35,7 @@ namespace SchoolManagementSystem
         private void CustomizeDesign()
         {
             panel_CourseSubMenu.Visible = false;
-            panel_ScoreSubMenu.Visible = false;
+         
             panel_stdsubmenu.Visible = false;
         }
 
@@ -43,9 +43,6 @@ namespace SchoolManagementSystem
         {
             if(panel_stdsubmenu.Visible == true)
                 panel_stdsubmenu.Visible = false;
-
-            if (panel_ScoreSubMenu.Visible == true)
-                panel_ScoreSubMenu.Visible = false;
 
             if (panel_CourseSubMenu.Visible == true)
                 panel_CourseSubMenu.Visible = false; 
@@ -114,7 +111,7 @@ namespace SchoolManagementSystem
         #region CourseSubMenu
         private void button_NewCourse_Click(object sender, EventArgs e)
         {
-            openChildForm(new CourseForm());
+            openChildForm(new AddTithe());
             //...
             //... Your Code
             //...
@@ -140,10 +137,7 @@ namespace SchoolManagementSystem
         }
         #endregion CourseSubMenu
 
-        private void button_Score_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panel_ScoreSubMenu);
-        }
+       
         #region ScoreSubMenu
         private void button_AddScore_Click(object sender, EventArgs e)
         {

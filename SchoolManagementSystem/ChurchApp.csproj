@@ -52,11 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CourseClass.cs" />
-    <Compile Include="CourseForm.cs">
+    <Compile Include="AddTithe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CourseForm.Designer.cs">
-      <DependentUpon>CourseForm.cs</DependentUpon>
+    <Compile Include="AddTithe.Designer.cs">
+      <DependentUpon>AddTithe.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
     <Compile Include="DGVPrinter.cs" />
@@ -105,8 +105,8 @@
       <DependentUpon>RegisterMember.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberClass.cs" />
-    <EmbeddedResource Include="CourseForm.resx">
-      <DependentUpon>CourseForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddTithe.resx">
+      <DependentUpon>AddTithe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>

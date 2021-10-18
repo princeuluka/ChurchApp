@@ -29,9 +29,9 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Clear = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cmb_StateofOrigin = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_Church = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -47,11 +47,10 @@ namespace SchoolManagementSystem
             this.txt_MiddleName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_clear = new System.Windows.Forms.Button();
-            this.button_Add = new System.Windows.Forms.Button();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button_upload = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButton_Female = new System.Windows.Forms.RadioButton();
@@ -63,43 +62,18 @@ namespace SchoolManagementSystem
             this.label2 = new System.Windows.Forms.Label();
             this.txtfirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(791, 35);
-            this.panel1.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(330, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "REGISTRATION";
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.btn_Clear);
+            this.panel2.Controls.Add(this.guna2GradientButton1);
             this.panel2.Controls.Add(this.cmb_StateofOrigin);
             this.panel2.Controls.Add(this.cmb_Church);
             this.panel2.Controls.Add(this.label13);
@@ -115,8 +89,6 @@ namespace SchoolManagementSystem
             this.panel2.Controls.Add(this.txt_MiddleName);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button_clear);
-            this.panel2.Controls.Add(this.button_Add);
             this.panel2.Controls.Add(this.txtPhone);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.button_upload);
@@ -134,8 +106,56 @@ namespace SchoolManagementSystem
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(791, 439);
+            this.panel2.Size = new System.Drawing.Size(918, 553);
             this.panel2.TabIndex = 19;
+            // 
+            // btn_Clear
+            // 
+            this.btn_Clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Clear.CheckedState.Parent = this.btn_Clear;
+            this.btn_Clear.CustomImages.Parent = this.btn_Clear;
+            this.btn_Clear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Clear.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Clear.DisabledState.Parent = this.btn_Clear;
+            this.btn_Clear.FillColor = System.Drawing.Color.Red;
+            this.btn_Clear.FillColor2 = System.Drawing.Color.White;
+            this.btn_Clear.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Clear.ForeColor = System.Drawing.Color.White;
+            this.btn_Clear.HoverState.Parent = this.btn_Clear;
+            this.btn_Clear.Location = new System.Drawing.Point(739, 511);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.ShadowDecoration.Parent = this.btn_Clear;
+            this.btn_Clear.Size = new System.Drawing.Size(77, 37);
+            this.btn_Clear.TabIndex = 54;
+            this.btn_Clear.Text = "CLEAR";
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Yellow;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Green;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(829, 511);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(77, 37);
+            this.guna2GradientButton1.TabIndex = 53;
+            this.guna2GradientButton1.Text = "REGISTER";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // cmb_StateofOrigin
             // 
@@ -144,6 +164,7 @@ namespace SchoolManagementSystem
             this.cmb_StateofOrigin.BackColor = System.Drawing.Color.Transparent;
             this.cmb_StateofOrigin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmb_StateofOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_StateofOrigin.FillColor = System.Drawing.Color.GreenYellow;
             this.cmb_StateofOrigin.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmb_StateofOrigin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmb_StateofOrigin.FocusedState.Parent = this.cmb_StateofOrigin;
@@ -152,7 +173,7 @@ namespace SchoolManagementSystem
             this.cmb_StateofOrigin.HoverState.Parent = this.cmb_StateofOrigin;
             this.cmb_StateofOrigin.ItemHeight = 30;
             this.cmb_StateofOrigin.ItemsAppearance.Parent = this.cmb_StateofOrigin;
-            this.cmb_StateofOrigin.Location = new System.Drawing.Point(121, 193);
+            this.cmb_StateofOrigin.Location = new System.Drawing.Point(121, 246);
             this.cmb_StateofOrigin.Name = "cmb_StateofOrigin";
             this.cmb_StateofOrigin.ShadowDecoration.Parent = this.cmb_StateofOrigin;
             this.cmb_StateofOrigin.Size = new System.Drawing.Size(228, 36);
@@ -164,7 +185,7 @@ namespace SchoolManagementSystem
             this.cmb_Church.AutoSize = true;
             this.cmb_Church.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Church.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.cmb_Church.Location = new System.Drawing.Point(428, 235);
+            this.cmb_Church.Location = new System.Drawing.Point(555, 235);
             this.cmb_Church.Name = "cmb_Church";
             this.cmb_Church.Size = new System.Drawing.Size(63, 16);
             this.cmb_Church.TabIndex = 51;
@@ -176,7 +197,7 @@ namespace SchoolManagementSystem
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label13.Location = new System.Drawing.Point(365, 157);
+            this.label13.Location = new System.Drawing.Point(492, 157);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(126, 16);
             this.label13.TabIndex = 50;
@@ -188,7 +209,7 @@ namespace SchoolManagementSystem
             this.cmb_State.AutoSize = true;
             this.cmb_State.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_State.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.cmb_State.Location = new System.Drawing.Point(392, 91);
+            this.cmb_State.Location = new System.Drawing.Point(519, 91);
             this.cmb_State.Name = "cmb_State";
             this.cmb_State.Size = new System.Drawing.Size(99, 16);
             this.cmb_State.TabIndex = 49;
@@ -200,6 +221,7 @@ namespace SchoolManagementSystem
             this.church_cmb.BackColor = System.Drawing.Color.Transparent;
             this.church_cmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.church_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.church_cmb.FillColor = System.Drawing.Color.GreenYellow;
             this.church_cmb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.church_cmb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.church_cmb.FocusedState.Parent = this.church_cmb;
@@ -208,7 +230,7 @@ namespace SchoolManagementSystem
             this.church_cmb.HoverState.Parent = this.church_cmb;
             this.church_cmb.ItemHeight = 30;
             this.church_cmb.ItemsAppearance.Parent = this.church_cmb;
-            this.church_cmb.Location = new System.Drawing.Point(498, 222);
+            this.church_cmb.Location = new System.Drawing.Point(625, 222);
             this.church_cmb.Name = "church_cmb";
             this.church_cmb.ShadowDecoration.Parent = this.church_cmb;
             this.church_cmb.Size = new System.Drawing.Size(140, 36);
@@ -220,6 +242,7 @@ namespace SchoolManagementSystem
             this.cmb_Superint.BackColor = System.Drawing.Color.Transparent;
             this.cmb_Superint.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmb_Superint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Superint.FillColor = System.Drawing.Color.GreenYellow;
             this.cmb_Superint.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmb_Superint.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmb_Superint.FocusedState.Parent = this.cmb_Superint;
@@ -228,7 +251,7 @@ namespace SchoolManagementSystem
             this.cmb_Superint.HoverState.Parent = this.cmb_Superint;
             this.cmb_Superint.ItemHeight = 30;
             this.cmb_Superint.ItemsAppearance.Parent = this.cmb_Superint;
-            this.cmb_Superint.Location = new System.Drawing.Point(497, 150);
+            this.cmb_Superint.Location = new System.Drawing.Point(624, 150);
             this.cmb_Superint.Name = "cmb_Superint";
             this.cmb_Superint.ShadowDecoration.Parent = this.cmb_Superint;
             this.cmb_Superint.Size = new System.Drawing.Size(140, 36);
@@ -241,6 +264,7 @@ namespace SchoolManagementSystem
             this.state_cmb.BackColor = System.Drawing.Color.Transparent;
             this.state_cmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.state_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.state_cmb.FillColor = System.Drawing.Color.GreenYellow;
             this.state_cmb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.state_cmb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.state_cmb.FocusedState.Parent = this.state_cmb;
@@ -249,7 +273,7 @@ namespace SchoolManagementSystem
             this.state_cmb.HoverState.Parent = this.state_cmb;
             this.state_cmb.ItemHeight = 30;
             this.state_cmb.ItemsAppearance.Parent = this.state_cmb;
-            this.state_cmb.Location = new System.Drawing.Point(497, 82);
+            this.state_cmb.Location = new System.Drawing.Point(624, 82);
             this.state_cmb.Name = "state_cmb";
             this.state_cmb.ShadowDecoration.Parent = this.state_cmb;
             this.state_cmb.Size = new System.Drawing.Size(140, 36);
@@ -262,7 +286,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox1.Location = new System.Drawing.Point(102, 310);
+            this.textBox1.Location = new System.Drawing.Point(102, 396);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(247, 23);
             this.textBox1.TabIndex = 45;
@@ -274,7 +298,7 @@ namespace SchoolManagementSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label11.Location = new System.Drawing.Point(41, 313);
+            this.label11.Location = new System.Drawing.Point(41, 399);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 16);
             this.label11.TabIndex = 44;
@@ -284,7 +308,7 @@ namespace SchoolManagementSystem
             // 
             this.txt_doBap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_doBap.Location = new System.Drawing.Point(121, 235);
+            this.txt_doBap.Location = new System.Drawing.Point(121, 300);
             this.txt_doBap.Name = "txt_doBap";
             this.txt_doBap.Size = new System.Drawing.Size(228, 23);
             this.txt_doBap.TabIndex = 43;
@@ -296,7 +320,7 @@ namespace SchoolManagementSystem
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label10.Location = new System.Drawing.Point(6, 240);
+            this.label10.Location = new System.Drawing.Point(6, 305);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(118, 16);
             this.label10.TabIndex = 42;
@@ -309,7 +333,7 @@ namespace SchoolManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label9.Location = new System.Drawing.Point(6, 199);
+            this.label9.Location = new System.Drawing.Point(6, 252);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 16);
             this.label9.TabIndex = 40;
@@ -321,7 +345,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_MiddleName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MiddleName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txt_MiddleName.Location = new System.Drawing.Point(107, 70);
+            this.txt_MiddleName.Location = new System.Drawing.Point(107, 84);
             this.txt_MiddleName.Name = "txt_MiddleName";
             this.txt_MiddleName.Size = new System.Drawing.Size(242, 23);
             this.txt_MiddleName.TabIndex = 39;
@@ -333,7 +357,7 @@ namespace SchoolManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label8.Location = new System.Drawing.Point(5, 73);
+            this.label8.Location = new System.Drawing.Point(5, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 16);
             this.label8.TabIndex = 38;
@@ -343,41 +367,11 @@ namespace SchoolManagementSystem
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel3.BackColor = System.Drawing.Color.Yellow;
             this.panel3.Location = new System.Drawing.Point(-5, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 10);
+            this.panel3.Size = new System.Drawing.Size(927, 14);
             this.panel3.TabIndex = 37;
-            // 
-            // button_clear
-            // 
-            this.button_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_clear.BackColor = System.Drawing.Color.Orange;
-            this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_clear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_clear.ForeColor = System.Drawing.Color.White;
-            this.button_clear.Location = new System.Drawing.Point(543, 399);
-            this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(118, 35);
-            this.button_clear.TabIndex = 36;
-            this.button_clear.Text = "Clear";
-            this.button_clear.UseVisualStyleBackColor = false;
-            this.button_clear.Click += new System.EventHandler(this.button_clear_Click_1);
-            // 
-            // button_Add
-            // 
-            this.button_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Add.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Add.ForeColor = System.Drawing.Color.White;
-            this.button_Add.Location = new System.Drawing.Point(667, 399);
-            this.button_Add.Name = "button_Add";
-            this.button_Add.Size = new System.Drawing.Size(118, 35);
-            this.button_Add.TabIndex = 35;
-            this.button_Add.Text = "Register";
-            this.button_Add.UseVisualStyleBackColor = false;
-            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
             // txtPhone
             // 
@@ -385,7 +379,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtPhone.Location = new System.Drawing.Point(107, 275);
+            this.txtPhone.Location = new System.Drawing.Point(107, 350);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(242, 23);
             this.txtPhone.TabIndex = 34;
@@ -397,7 +391,7 @@ namespace SchoolManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label6.Location = new System.Drawing.Point(46, 278);
+            this.label6.Location = new System.Drawing.Point(46, 353);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 33;
@@ -410,7 +404,7 @@ namespace SchoolManagementSystem
             this.button_upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_upload.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_upload.ForeColor = System.Drawing.Color.White;
-            this.button_upload.Location = new System.Drawing.Point(663, 136);
+            this.button_upload.Location = new System.Drawing.Point(790, 136);
             this.button_upload.Name = "button_upload";
             this.button_upload.Size = new System.Drawing.Size(118, 35);
             this.button_upload.TabIndex = 32;
@@ -418,14 +412,25 @@ namespace SchoolManagementSystem
             this.button_upload.UseVisualStyleBackColor = false;
             this.button_upload.Click += new System.EventHandler(this.button_upload_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.Location = new System.Drawing.Point(790, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
             // txtAddress
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAddress.Location = new System.Drawing.Point(81, 343);
+            this.txtAddress.Location = new System.Drawing.Point(81, 457);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(556, 50);
+            this.txtAddress.Size = new System.Drawing.Size(683, 50);
             this.txtAddress.TabIndex = 30;
             // 
             // label5
@@ -435,7 +440,7 @@ namespace SchoolManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label5.Location = new System.Drawing.Point(6, 346);
+            this.label5.Location = new System.Drawing.Point(6, 460);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 29;
@@ -447,7 +452,7 @@ namespace SchoolManagementSystem
             this.radioButton_Female.AutoSize = true;
             this.radioButton_Female.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Female.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.radioButton_Female.Location = new System.Drawing.Point(519, 27);
+            this.radioButton_Female.Location = new System.Drawing.Point(646, 27);
             this.radioButton_Female.Name = "radioButton_Female";
             this.radioButton_Female.Size = new System.Drawing.Size(73, 20);
             this.radioButton_Female.TabIndex = 28;
@@ -462,7 +467,7 @@ namespace SchoolManagementSystem
             this.radioButton_Male.Checked = true;
             this.radioButton_Male.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.radioButton_Male.Location = new System.Drawing.Point(463, 28);
+            this.radioButton_Male.Location = new System.Drawing.Point(590, 28);
             this.radioButton_Male.Name = "radioButton_Male";
             this.radioButton_Male.Size = new System.Drawing.Size(59, 20);
             this.radioButton_Male.TabIndex = 27;
@@ -476,7 +481,7 @@ namespace SchoolManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(365, 31);
+            this.label4.Location = new System.Drawing.Point(492, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 26;
@@ -486,7 +491,7 @@ namespace SchoolManagementSystem
             // 
             this.txtdob.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtdob.Location = new System.Drawing.Point(105, 150);
+            this.txtdob.Location = new System.Drawing.Point(105, 193);
             this.txtdob.Name = "txtdob";
             this.txtdob.Size = new System.Drawing.Size(244, 23);
             this.txtdob.TabIndex = 25;
@@ -498,7 +503,7 @@ namespace SchoolManagementSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label3.Location = new System.Drawing.Point(6, 155);
+            this.label3.Location = new System.Drawing.Point(6, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 24;
@@ -510,7 +515,7 @@ namespace SchoolManagementSystem
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtLastName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.txtLastName.Location = new System.Drawing.Point(107, 112);
+            this.txtLastName.Location = new System.Drawing.Point(107, 142);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(242, 23);
             this.txtLastName.TabIndex = 23;
@@ -522,7 +527,7 @@ namespace SchoolManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label2.Location = new System.Drawing.Point(12, 115);
+            this.label2.Location = new System.Drawing.Point(12, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 16);
             this.label2.TabIndex = 22;
@@ -552,33 +557,31 @@ namespace SchoolManagementSystem
             this.label1.TabIndex = 20;
             this.label1.Text = "First Name :";
             // 
-            // pictureBox1
+            // guna2GradientPanel1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox1.Location = new System.Drawing.Point(663, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Green;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Yellow;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(918, 34);
+            this.guna2GradientPanel1.TabIndex = 20;
             // 
             // RegisterMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(791, 474);
+            this.ClientSize = new System.Drawing.Size(918, 588);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterMember";
             this.Text = "RegisterForm2";
             this.Load += new System.EventHandler(this.RegisterForm2_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -587,12 +590,8 @@ namespace SchoolManagementSystem
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button_clear;
-        private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button_upload;
@@ -622,5 +621,8 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_MiddleName;
         private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_Clear;
     }
 }

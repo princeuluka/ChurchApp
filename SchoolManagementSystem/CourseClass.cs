@@ -13,13 +13,18 @@ namespace SchoolManagementSystem
     { 
         DBConnect connect = new DBConnect();
 
-        public bool InsertCourse(string cName, int hr, string desc)
+        public bool InsertTithe(string State, string SuperInt, string Church, string Member,string MemberId, DateTime Date, int amount, string remarks)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `course`(`CourseName`, `CourseHour`, `Description`) VALUES (@cn,@ch,@desc)",connect.getConnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `tithe`(`State`, `Superintendency`, `Church`, `Member`,`MemberId`,`Amount`,`Date`, `Remarks`) VALUES (@st,@si,@ch,@me,@mi,@dt,@am,@re)",connect.getConnection);
 
-            command.Parameters.Add("@cn",MySqlDbType.VarChar).Value = cName;
-            command.Parameters.Add("@ch", MySqlDbType.Int32).Value = hr;
-            command.Parameters.Add("@desc", MySqlDbType.VarChar).Value = desc;
+            command.Parameters.Add("@st",MySqlDbType.VarChar).Value = State;
+            command.Parameters.Add("@si", MySqlDbType.VarChar).Value = SuperInt;
+            command.Parameters.Add("@ch", MySqlDbType.VarChar).Value = Church;
+            command.Parameters.Add("@me", MySqlDbType.VarChar).Value = Member;
+            command.Parameters.Add("@mi", MySqlDbType.VarChar).Value = MemberId;
+            command.Parameters.Add("@dt", MySqlDbType.DateTime).Value = Date;
+            command.Parameters.Add("@am", MySqlDbType.Int32).Value = amount;
+            command.Parameters.Add("@re", MySqlDbType.VarChar).Value = remarks;
 
             connect.openConnect();
 

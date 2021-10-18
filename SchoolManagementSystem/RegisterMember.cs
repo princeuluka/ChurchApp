@@ -123,55 +123,6 @@ namespace SchoolManagementSystem
                 pictureBox1.Image = Image.FromFile(opf.FileName);
         }
 
-        private void button_clear_Click_1(object sender, EventArgs e)
-        {
-            clearFields();
-        }
-
-        private void button_Add_Click(object sender, EventArgs e)
-        {
-            string fname = txtfirstName.Text;
-            string lname = txtLastName.Text;
-            DateTime bdate = txtdob.Value;
-            string phone = txtPhone.Text;
-            string address = txtAddress.Text;
-            string gender = radioButton_Male.Checked ? "Male" : "Female";
-           
-
-
-
-
-            int born_year = txtdob.Value.Year;
-            int this_year = DateTime.Now.Year;
-            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
-            {
-                MessageBox.Show("The student age must be between 10 and 100", "INVALID BIRTH DATE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (Verify())
-            {
-                try
-                {
-                    MemoryStream ms = new MemoryStream();
-                    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                    byte[] img = ms.ToArray();
-                    if (student.insertStudent(fname, lname, bdate, phone, address, gender, img))
-                    {
-                       
-                        MessageBox.Show("New Student Added", "New Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Empty Field", "New Student", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
         private void state_cmb_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection con;
@@ -272,6 +223,54 @@ namespace SchoolManagementSystem
             }
         }
 
-      
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+
+            string fname = txtfirstName.Text;
+            string lname = txtLastName.Text;
+            DateTime bdate = txtdob.Value;
+            string phone = txtPhone.Text;
+            string address = txtAddress.Text;
+            string gender = radioButton_Male.Checked ? "Male" : "Female";
+
+
+
+
+
+            int born_year = txtdob.Value.Year;
+            int this_year = DateTime.Now.Year;
+            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
+            {
+                MessageBox.Show("The student age must be between 10 and 100", "INVALID BIRTH DATE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (Verify())
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                    byte[] img = ms.ToArray();
+                    if (student.insertStudent(fname, lname, bdate, phone, address, gender, img))
+                    {
+
+                        MessageBox.Show("New Student Added", "New Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearFields();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Empty Field", "New Student", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
     }
 }

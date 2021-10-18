@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UEC", "SchoolManagementSystem\UEC.csproj", "{51179439-54DF-41A3-834C-7C786DD7A482}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChurchApp", "SchoolManagementSystem\ChurchApp.csproj", "{51179439-54DF-41A3-834C-7C786DD7A482}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

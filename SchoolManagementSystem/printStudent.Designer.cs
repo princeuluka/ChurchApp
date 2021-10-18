@@ -33,7 +33,6 @@ namespace SchoolManagementSystem
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DataGridView_student = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.radioButton_Female = new System.Windows.Forms.RadioButton();
             this.radioButton_Male = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace SchoolManagementSystem
             this.button_Print = new System.Windows.Forms.Button();
             this.radioButton_all = new System.Windows.Forms.RadioButton();
             this.button_Search = new System.Windows.Forms.Button();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_student)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,12 +78,12 @@ namespace SchoolManagementSystem
             this.DataGridView_student.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView_student.EnableHeadersVisualStyles = false;
             this.DataGridView_student.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView_student.Location = new System.Drawing.Point(12, 35);
+            this.DataGridView_student.Location = new System.Drawing.Point(7, 32);
             this.DataGridView_student.Name = "DataGridView_student";
             this.DataGridView_student.RowHeadersVisible = false;
             this.DataGridView_student.RowTemplate.Height = 80;
             this.DataGridView_student.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView_student.Size = new System.Drawing.Size(776, 330);
+            this.DataGridView_student.Size = new System.Drawing.Size(781, 330);
             this.DataGridView_student.TabIndex = 38;
             this.DataGridView_student.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_student.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -107,24 +107,13 @@ namespace SchoolManagementSystem
             this.DataGridView_student.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_student.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel3.Location = new System.Drawing.Point(0, 371);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 10);
-            this.panel3.TabIndex = 42;
-     
-            // 
             // radioButton_Female
             // 
             this.radioButton_Female.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton_Female.AutoSize = true;
             this.radioButton_Female.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Female.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.radioButton_Female.Location = new System.Drawing.Point(125, 388);
+            this.radioButton_Female.Location = new System.Drawing.Point(125, 403);
             this.radioButton_Female.Name = "radioButton_Female";
             this.radioButton_Female.Size = new System.Drawing.Size(73, 20);
             this.radioButton_Female.TabIndex = 41;
@@ -137,13 +126,12 @@ namespace SchoolManagementSystem
             this.radioButton_Male.AutoSize = true;
             this.radioButton_Male.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_Male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.radioButton_Male.Location = new System.Drawing.Point(204, 388);
+            this.radioButton_Male.Location = new System.Drawing.Point(204, 403);
             this.radioButton_Male.Name = "radioButton_Male";
             this.radioButton_Male.Size = new System.Drawing.Size(59, 20);
             this.radioButton_Male.TabIndex = 40;
             this.radioButton_Male.Text = "Male";
             this.radioButton_Male.UseVisualStyleBackColor = true;
-          
             // 
             // label4
             // 
@@ -151,12 +139,11 @@ namespace SchoolManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(4, 390);
+            this.label4.Location = new System.Drawing.Point(4, 405);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 39;
             this.label4.Text = "Gender :";
-           
             // 
             // comboBox_class
             // 
@@ -166,7 +153,6 @@ namespace SchoolManagementSystem
             this.comboBox_class.Name = "comboBox_class";
             this.comboBox_class.Size = new System.Drawing.Size(121, 21);
             this.comboBox_class.TabIndex = 43;
-         
             // 
             // label1
             // 
@@ -179,12 +165,11 @@ namespace SchoolManagementSystem
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 44;
             this.label1.Text = "Class :";
-            
             // 
             // button_Print
             // 
             this.button_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button_Print.BackColor = System.Drawing.Color.GreenYellow;
             this.button_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Print.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Print.ForeColor = System.Drawing.Color.White;
@@ -203,19 +188,18 @@ namespace SchoolManagementSystem
             this.radioButton_all.Checked = true;
             this.radioButton_all.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_all.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.radioButton_all.Location = new System.Drawing.Point(75, 388);
+            this.radioButton_all.Location = new System.Drawing.Point(75, 403);
             this.radioButton_all.Name = "radioButton_all";
             this.radioButton_all.Size = new System.Drawing.Size(44, 20);
             this.radioButton_all.TabIndex = 46;
             this.radioButton_all.TabStop = true;
             this.radioButton_all.Text = "All";
             this.radioButton_all.UseVisualStyleBackColor = true;
-            
             // 
             // button_Search
             // 
             this.button_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button_Search.BackColor = System.Drawing.Color.GreenYellow;
             this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Search.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Search.ForeColor = System.Drawing.Color.White;
@@ -227,18 +211,28 @@ namespace SchoolManagementSystem
             this.button_Search.UseVisualStyleBackColor = false;
             this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Green;
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Yellow;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(-2, 371);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.ShadowDecoration.Parent = this.guna2GradientPanel1;
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(806, 24);
+            this.guna2GradientPanel1.TabIndex = 48;
+            // 
             // printStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.radioButton_all);
             this.Controls.Add(this.button_Print);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox_class);
             this.Controls.Add(this.DataGridView_student);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.radioButton_Female);
             this.Controls.Add(this.radioButton_Male);
             this.Controls.Add(this.label4);
@@ -254,7 +248,6 @@ namespace SchoolManagementSystem
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_student;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton radioButton_Female;
         private System.Windows.Forms.RadioButton radioButton_Male;
         private System.Windows.Forms.Label label4;
@@ -263,5 +256,6 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Button button_Print;
         private System.Windows.Forms.RadioButton radioButton_all;
         private System.Windows.Forms.Button button_Search;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }

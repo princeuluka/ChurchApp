@@ -32,7 +32,8 @@ namespace SchoolManagementSystem
         {
             MemberId = dataGridView_Members.CurrentRow.Cells[0].Value.ToString();
             EditMember edit = new EditMember();
-            edit.ID = dataGridView_Members.CurrentRow.Cells[0].Value.ToString();
+          
+           edit.ID = dataGridView_Members.CurrentRow.Cells[0].Value.ToString();
             edit.Show();
             
            

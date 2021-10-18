@@ -47,7 +47,21 @@ namespace SchoolManagementSystem
             adapter.Fill(table);
             return table;
         }
-        
+
+
+        public string getMemberId(string fname, string lname)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT MemberId FROM `members` WHERE FirstName = @fn AND LastName = @fn", connect.getConnection);
+            command.Parameters.Add("@fn", MySqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lname;
+            connect.openConnect();
+            string ID = command.ExecuteScalar().ToString();
+            connect.closeConnect();
+            
+            return ID;
+        }
+
+
         public string exeCount(string query)
         {
             MySqlCommand command = new MySqlCommand(query, connect.getConnection);
