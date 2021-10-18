@@ -12,18 +12,29 @@ namespace SchoolManagementSystem
     {
         DBConnect connect = new DBConnect();
 
-        public bool insertStudent(string fname,string lname, DateTime bdate, string phone, string address, string gender, byte[] img)
+        public bool insertMember(string fname,string mname,string lname, DateTime bdate,string origin,DateTime Dbop, string phone,string position, string address, string gender,string churchState, string supint, string church)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `student`(`StdFirstName`, `StdLastName`, `BirthDate`, `Phone`, `Address`, `Gender`,  `Photo`) VALUES(@fn, @ln, @bd, @ph, @Adr,@gd, @img)", connect.getConnection);
-           
+            MySqlCommand command = new MySqlCommand("INSERT INTO `members` (`State`, `superintendency`," +
+                " `church`, `FirstName`, `MiddleName`, `LastName`, `DOB`, `Gender`," +
+                " `StateOfOrigin`, `Address`, `DateOfBaptism`, `Position`, `Phone`)" +
+                " VALUES(@st, @si, @ch, @fn, @mn, @ln, @dob, @gn,@soo, @Adr, @dop, @po, @ph)", connect.getConnection);
 
+            command.Parameters.Add("@st", MySqlDbType.VarChar).Value = churchState;
+            command.Parameters.Add("@si", MySqlDbType.VarChar).Value = supint;
+            command.Parameters.Add("@ch", MySqlDbType.VarChar).Value = church;
             command.Parameters.Add("@fn",MySqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@mn", MySqlDbType.VarChar).Value = mname;
             command.Parameters.Add("@ln", MySqlDbType.VarChar).Value = lname;
-            command.Parameters.Add("@bd", MySqlDbType.Date).Value = bdate;
-            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@dob", MySqlDbType.Date).Value = bdate;
+            command.Parameters.Add("@gn", MySqlDbType.VarChar).Value = gender;
+            command.Parameters.Add("@soo", MySqlDbType.VarChar).Value = origin;
             command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
-            command.Parameters.Add("@gd", MySqlDbType.VarChar).Value = gender;
-            command.Parameters.Add("@img", MySqlDbType.Blob).Value = img;
+            command.Parameters.Add("@dop", MySqlDbType.VarChar).Value = Dbop;
+            command.Parameters.Add("@po", MySqlDbType.VarChar).Value = position;
+            command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = phone;
+            
+            
+            //command.Parameters.Add("@img", MySqlDbType.Blob).Value = img;
 
             connect.openConnect();
 

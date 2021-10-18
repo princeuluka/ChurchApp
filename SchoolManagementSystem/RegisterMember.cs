@@ -15,7 +15,7 @@ namespace SchoolManagementSystem
 {
     public partial class RegisterMember : Form
     {
-        MemberClass student = new MemberClass();
+        MemberClass member = new MemberClass();
         private string StateId;
         private string SuperintId;
         public RegisterMember()
@@ -33,17 +33,20 @@ namespace SchoolManagementSystem
             txtdob.ResetText();
             txt_doBap.ResetText();
             txt_MiddleName.Clear();
-            church_cmb.ResetText();
-            state_cmb.ResetText();
-            cmb_State.ResetText();
-            
+            church_cmb.SelectedIndex = -1;
+            state_cmb.SelectedIndex = -1;
+            cmb_StateofOrigin.SelectedIndex = -1;
+            cmb_Superint.SelectedIndex = -1;
+            txt_position.Clear();
+
+
         }
 
         bool Verify()
             {
                 if ((txtfirstName.Text == "") || (txtLastName.Text == "") ||
-                    (txtPhone.Text == "") || (txtAddress.Text == "") ||
-                    (pictureBox1.Image == null))
+                    (txtPhone.Text == "") || (txtAddress.Text == ""))
+
                 {
                     return false;
                 }
@@ -128,26 +131,7 @@ namespace SchoolManagementSystem
             MySqlConnection con;
             MySqlCommand cmd;
             MySqlDataReader dr;
-            try
-            {
-                con = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=church");
-                cmd = new MySqlCommand();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "SELECT StateId from state where State = '" + state_cmb.Text +"'";
 
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                 StateId =Convert.ToString(dr["StateId"]);
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                string msg = ex.Message;
-            }
 
             try
             {
@@ -155,7 +139,7 @@ namespace SchoolManagementSystem
                 cmd = new MySqlCommand();
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "SELECT Name from superintendency where State = '" + StateId + "'";
+                cmd.CommandText = "SELECT Name from superintendency where State = '" + state_cmb.Text + "'";
 
                 dr = cmd.ExecuteReader();
 
@@ -170,8 +154,6 @@ namespace SchoolManagementSystem
                 string msg = ex.Message;
             }
 
-
-
         }
 
         private void cmb_Superint_SelectedIndexChanged(object sender, EventArgs e)
@@ -180,26 +162,6 @@ namespace SchoolManagementSystem
             MySqlCommand cmd;
             MySqlDataReader dr;
 
-            try
-            {
-                con = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=church");
-                cmd = new MySqlCommand();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "SELECT ID from superintendency where Name = '" + cmb_Superint.Text + "'";
-
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    SuperintId = Convert.ToString(dr["ID"]);
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                string msg = ex.Message;
-            }
 
             try
             {
@@ -207,7 +169,7 @@ namespace SchoolManagementSystem
                 cmd = new MySqlCommand();
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "SELECT Name from churches where superintendencyId  = '" + SuperintId + "'";
+                cmd.CommandText = "SELECT Name from churches  where superintendency = '" + cmb_Superint.Text + "'";
 
                 dr = cmd.ExecuteReader();
 
@@ -227,33 +189,29 @@ namespace SchoolManagementSystem
         {
 
             string fname = txtfirstName.Text;
+            string mname = txt_MiddleName.Text;
             string lname = txtLastName.Text;
             DateTime bdate = txtdob.Value;
+            string origin = cmb_StateofOrigin.Text;
+            DateTime Dbop = txt_doBap.Value;
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
             string gender = radioButton_Male.Checked ? "Male" : "Female";
+            string churchState = state_cmb.Text;
+            string supint = cmb_Superint.Text;
+            string church = church_cmb.Text;
+            string position = txt_position.Text;
 
-
-
-
-
-            int born_year = txtdob.Value.Year;
-            int this_year = DateTime.Now.Year;
-            if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
-            {
-                MessageBox.Show("The student age must be between 10 and 100", "INVALID BIRTH DATE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (Verify())
+            if (Verify())
             {
                 try
                 {
-                    MemoryStream ms = new MemoryStream();
-                    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                    byte[] img = ms.ToArray();
-                    if (student.insertStudent(fname, lname, bdate, phone, address, gender, img))
+                    // MemoryStream ms = new MemoryStream();
+                    //pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                    //byte[] img = ms.ToArray();
+                    if (member.insertMember(fname, mname, lname, bdate, origin, Dbop, phone, position, address, gender, churchState, supint, church))
                     {
-
-                        MessageBox.Show("New Student Added", "New Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("New Member Added", "New Member", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clearFields();
                     }
                 }
@@ -264,9 +222,12 @@ namespace SchoolManagementSystem
             }
             else
             {
-                MessageBox.Show("Empty Field", "New Student", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please input all required fields","Add Member",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
-        }
+              
+            }
+            
+        
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {

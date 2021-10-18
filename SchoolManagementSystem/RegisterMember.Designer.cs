@@ -33,13 +33,13 @@ namespace SchoolManagementSystem
             this.btn_Clear = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cmb_StateofOrigin = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmb_Church = new System.Windows.Forms.Label();
+            this.lbl_Church = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.cmb_State = new System.Windows.Forms.Label();
+            this.lbl_State = new System.Windows.Forms.Label();
             this.church_cmb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_Superint = new Guna.UI2.WinForms.Guna2ComboBox();
             this.state_cmb = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_position = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_doBap = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,13 +75,13 @@ namespace SchoolManagementSystem
             this.panel2.Controls.Add(this.btn_Clear);
             this.panel2.Controls.Add(this.guna2GradientButton1);
             this.panel2.Controls.Add(this.cmb_StateofOrigin);
-            this.panel2.Controls.Add(this.cmb_Church);
+            this.panel2.Controls.Add(this.lbl_Church);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.cmb_State);
+            this.panel2.Controls.Add(this.lbl_State);
             this.panel2.Controls.Add(this.church_cmb);
             this.panel2.Controls.Add(this.cmb_Superint);
             this.panel2.Controls.Add(this.state_cmb);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_position);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txt_doBap);
             this.panel2.Controls.Add(this.label10);
@@ -179,17 +179,17 @@ namespace SchoolManagementSystem
             this.cmb_StateofOrigin.Size = new System.Drawing.Size(228, 36);
             this.cmb_StateofOrigin.TabIndex = 52;
             // 
-            // cmb_Church
+            // lbl_Church
             // 
-            this.cmb_Church.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Church.AutoSize = true;
-            this.cmb_Church.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_Church.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.cmb_Church.Location = new System.Drawing.Point(555, 235);
-            this.cmb_Church.Name = "cmb_Church";
-            this.cmb_Church.Size = new System.Drawing.Size(63, 16);
-            this.cmb_Church.TabIndex = 51;
-            this.cmb_Church.Text = "Church :";
+            this.lbl_Church.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Church.AutoSize = true;
+            this.lbl_Church.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Church.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lbl_Church.Location = new System.Drawing.Point(555, 235);
+            this.lbl_Church.Name = "lbl_Church";
+            this.lbl_Church.Size = new System.Drawing.Size(63, 16);
+            this.lbl_Church.TabIndex = 51;
+            this.lbl_Church.Text = "Church :";
             // 
             // label13
             // 
@@ -203,17 +203,17 @@ namespace SchoolManagementSystem
             this.label13.TabIndex = 50;
             this.label13.Text = "Superintendency :";
             // 
-            // cmb_State
+            // lbl_State
             // 
-            this.cmb_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_State.AutoSize = true;
-            this.cmb_State.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_State.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.cmb_State.Location = new System.Drawing.Point(519, 91);
-            this.cmb_State.Name = "cmb_State";
-            this.cmb_State.Size = new System.Drawing.Size(99, 16);
-            this.cmb_State.TabIndex = 49;
-            this.cmb_State.Text = "Church State :";
+            this.lbl_State.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_State.AutoSize = true;
+            this.lbl_State.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_State.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.lbl_State.Location = new System.Drawing.Point(519, 91);
+            this.lbl_State.Name = "lbl_State";
+            this.lbl_State.Size = new System.Drawing.Size(99, 16);
+            this.lbl_State.TabIndex = 49;
+            this.lbl_State.Text = "Church State :";
             // 
             // church_cmb
             // 
@@ -280,16 +280,16 @@ namespace SchoolManagementSystem
             this.state_cmb.TabIndex = 46;
             this.state_cmb.SelectedIndexChanged += new System.EventHandler(this.state_cmb_SelectedIndexChanged);
             // 
-            // textBox1
+            // txt_position
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_position.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.textBox1.Location = new System.Drawing.Point(102, 396);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 23);
-            this.textBox1.TabIndex = 45;
+            this.txt_position.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_position.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.txt_position.Location = new System.Drawing.Point(102, 396);
+            this.txt_position.Name = "txt_position";
+            this.txt_position.Size = new System.Drawing.Size(247, 23);
+            this.txt_position.TabIndex = 45;
             // 
             // label11
             // 
@@ -608,13 +608,13 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.TextBox txtfirstName;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_StateofOrigin;
-        private System.Windows.Forms.Label cmb_Church;
+        private System.Windows.Forms.Label lbl_Church;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label cmb_State;
+        private System.Windows.Forms.Label lbl_State;
         private Guna.UI2.WinForms.Guna2ComboBox church_cmb;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_Superint;
         private Guna.UI2.WinForms.Guna2ComboBox state_cmb;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_position;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker txt_doBap;
         private System.Windows.Forms.Label label10;
