@@ -14,7 +14,7 @@ namespace SchoolManagementSystem
     public partial class AddTithe : Form
     {
         DBConnect connect = new DBConnect();
-        TitheClass course = new TitheClass();
+        TitheClass tithe = new TitheClass();
         MemberClass member = new MemberClass();
         public string lname;
         public string fname;
@@ -243,7 +243,7 @@ namespace SchoolManagementSystem
         private void AddTithe_Load(object sender, EventArgs e)
         {
             LoadState();
-            Tithe_Table.DataSource = member.getTitheList();
+            Tithe_Table.DataSource = tithe.getTitheList();
         }
 
       

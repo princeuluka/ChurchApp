@@ -59,16 +59,6 @@ namespace SchoolManagementSystem
             return table;
         }
 
-        public DataTable getTitheList()
-        {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `tithe`", connect.getConnection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            return table;
-        }
-
-
         public string getMemberId(string fname, string lname)
         {
             MySqlCommand command = new MySqlCommand("SELECT MemberId FROM `members` WHERE FirstName = @fn AND LastName = @fn", connect.getConnection);
@@ -115,14 +105,6 @@ namespace SchoolManagementSystem
             return table;
         }
 
-        public DataTable SearchTithe(string SearchData)
-        {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `tithe` WHERE CONCAT(`Church`,`Member`) LIKE '%" + SearchData + "%'", connect.getConnection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            return table;
-        }
 
         public bool UpdateMember(int id, string fname, string Mname ,string lname, DateTime bdate, string phone, string address, string gender,string church, DateTime DOBP,string position, string state,string Soa, string Sint)
         {

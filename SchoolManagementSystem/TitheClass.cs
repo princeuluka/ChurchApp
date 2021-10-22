@@ -106,5 +106,14 @@ namespace SchoolManagementSystem
             return table;
         }
 
+        public DataTable SearchTithe(string SearchData)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tithe` WHERE CONCAT(`Church`,`Member`) LIKE '%" + SearchData + "%'", connect.getConnection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
     }
 }
