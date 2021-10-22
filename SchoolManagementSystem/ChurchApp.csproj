@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CourseClass.cs" />
+    <Compile Include="TitheClass.cs" />
     <Compile Include="AddTithe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +72,11 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCourse.cs">
+    <Compile Include="ManageTithe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCourse.Designer.cs">
-      <DependentUpon>ManageCourse.cs</DependentUpon>
+    <Compile Include="ManageTithe.Designer.cs">
+      <DependentUpon>ManageTithe.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageMember.cs">
       <SubType>Form</SubType>
@@ -84,25 +84,25 @@
     <Compile Include="ManageMember.Designer.cs">
       <DependentUpon>ManageMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintCourse.cs">
+    <Compile Include="PrintTithe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintCourse.Designer.cs">
-      <DependentUpon>PrintCourse.cs</DependentUpon>
+    <Compile Include="PrintTithe.Designer.cs">
+      <DependentUpon>PrintTithe.cs</DependentUpon>
     </Compile>
-    <Compile Include="printStudent.cs">
+    <Compile Include="printMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="printStudent.Designer.cs">
-      <DependentUpon>printStudent.cs</DependentUpon>
+    <Compile Include="printMember.Designer.cs">
+      <DependentUpon>printMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterMember.cs">
+    <Compile Include="AddMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterMember.Designer.cs">
-      <DependentUpon>RegisterMember.cs</DependentUpon>
+    <Compile Include="AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberClass.cs" />
     <EmbeddedResource Include="AddTithe.resx">
@@ -114,17 +114,17 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCourse.resx">
-      <DependentUpon>ManageCourse.cs</DependentUpon>
+    <EmbeddedResource Include="ManageTithe.resx">
+      <DependentUpon>ManageTithe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageMember.resx">
       <DependentUpon>ManageMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintCourse.resx">
-      <DependentUpon>PrintCourse.cs</DependentUpon>
+    <EmbeddedResource Include="PrintTithe.resx">
+      <DependentUpon>PrintTithe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="printStudent.resx">
-      <DependentUpon>printStudent.cs</DependentUpon>
+    <EmbeddedResource Include="printMember.resx">
+      <DependentUpon>printMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,8 +136,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegisterMember.resx">
-      <DependentUpon>RegisterMember.cs</DependentUpon>
+    <EmbeddedResource Include="AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

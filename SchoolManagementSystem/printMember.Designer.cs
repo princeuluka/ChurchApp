@@ -1,7 +1,7 @@
 ﻿
 namespace SchoolManagementSystem
 {
-    partial class printStudent
+    partial class printMember
     {
         /// <summary>
         /// Required designer variable.

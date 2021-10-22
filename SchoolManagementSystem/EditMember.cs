@@ -247,6 +247,7 @@ namespace SchoolManagementSystem
                         if (member.UpdateMember(id, fname, Mname, lname, bdate, phone,  address,  gender, church, DOBP,  position,  state,  Soa, Sint))
                         {
                             MessageBox.Show("Record updated", "Update Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
                             this.Close();
                         }
                     }

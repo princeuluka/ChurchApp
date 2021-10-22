@@ -12,39 +12,46 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class PrintCourse : Form
+    public partial class PrintTithe : Form
     {
-        CourseClass course = new CourseClass();
+        TitheClass course = new TitheClass();
         DGVPrinter printer = new DGVPrinter();
-        public PrintCourse()
+        MemberClass member = new MemberClass();
+        public PrintTithe()
         {
             InitializeComponent();
         }
 
         private void PrintCourse_Load(object sender, EventArgs e)
         {
-            ShowData(new MySqlCommand("Select * from `course` "));
+            ShowData(new MySqlCommand("Select * from `tithe` "));
         }
 
         private void ShowData(MySqlCommand command)
         {
-            DataGridView_course.ReadOnly = true;
-            DataGridView_course.DataSource = course.getList(command);
+            DataGridView_tithe.ReadOnly = true;
+            DataGridView_tithe.DataSource = course.getList(command);
         }
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            printer.Title = "Mdemy Course List";
+            printer.Title = "TITHE";
             printer.SubTitle = string.Format("Date: {0}", DateTime.Now.Date);
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
             printer.PorportionalColumns = true;
             printer.HeaderCellAlignment = StringAlignment.Near;
-            printer.Footer = "foxlearn";
+            printer.Footer = "UNITED EVANGELICAL CHURCH";
             printer.FooterSpacing = 15;
             printer.printDocument.DefaultPageSettings.Landscape = true;
-            printer.PrintDataGridView(DataGridView_course);
+            printer.PrintDataGridView(DataGridView_tithe);
+        }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            string data =txt_Search.Text;
+            DataGridView_tithe.DataSource = member.SearchTithe(data);
         }
     }
 }

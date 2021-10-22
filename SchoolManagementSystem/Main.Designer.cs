@@ -29,12 +29,13 @@ namespace SchoolManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel_slide = new System.Windows.Forms.Panel();
             this.button_dashboard = new System.Windows.Forms.Button();
             this.button_Exit = new System.Windows.Forms.Button();
             this.panel_CourseSubMenu = new System.Windows.Forms.Panel();
-            this.button_PrintCourse = new System.Windows.Forms.Button();
-            this.button_ManageCourse = new System.Windows.Forms.Button();
+            this.button_PrintTithe = new System.Windows.Forms.Button();
+            this.btn_ManageTithe = new System.Windows.Forms.Button();
             this.button_NewTithe = new System.Windows.Forms.Button();
             this.button_Course = new System.Windows.Forms.Button();
             this.panel_stdsubmenu = new System.Windows.Forms.Panel();
@@ -120,8 +121,8 @@ namespace SchoolManagementSystem
             // panel_CourseSubMenu
             // 
             this.panel_CourseSubMenu.BackColor = System.Drawing.Color.Green;
-            this.panel_CourseSubMenu.Controls.Add(this.button_PrintCourse);
-            this.panel_CourseSubMenu.Controls.Add(this.button_ManageCourse);
+            this.panel_CourseSubMenu.Controls.Add(this.button_PrintTithe);
+            this.panel_CourseSubMenu.Controls.Add(this.btn_ManageTithe);
             this.panel_CourseSubMenu.Controls.Add(this.button_NewTithe);
             this.panel_CourseSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_CourseSubMenu.Location = new System.Drawing.Point(0, 322);
@@ -130,37 +131,37 @@ namespace SchoolManagementSystem
             this.panel_CourseSubMenu.Size = new System.Drawing.Size(186, 127);
             this.panel_CourseSubMenu.TabIndex = 3;
             // 
-            // button_PrintCourse
+            // button_PrintTithe
             // 
-            this.button_PrintCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_PrintCourse.FlatAppearance.BorderSize = 0;
-            this.button_PrintCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_PrintCourse.ForeColor = System.Drawing.Color.Black;
-            this.button_PrintCourse.Location = new System.Drawing.Point(0, 80);
-            this.button_PrintCourse.Name = "button_PrintCourse";
-            this.button_PrintCourse.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button_PrintCourse.Size = new System.Drawing.Size(186, 39);
-            this.button_PrintCourse.TabIndex = 3;
-            this.button_PrintCourse.Text = "Print";
-            this.button_PrintCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_PrintCourse.UseVisualStyleBackColor = true;
-            this.button_PrintCourse.Click += new System.EventHandler(this.button_PrintCourse_Click);
+            this.button_PrintTithe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_PrintTithe.FlatAppearance.BorderSize = 0;
+            this.button_PrintTithe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_PrintTithe.ForeColor = System.Drawing.Color.Black;
+            this.button_PrintTithe.Location = new System.Drawing.Point(0, 80);
+            this.button_PrintTithe.Name = "button_PrintTithe";
+            this.button_PrintTithe.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button_PrintTithe.Size = new System.Drawing.Size(186, 39);
+            this.button_PrintTithe.TabIndex = 3;
+            this.button_PrintTithe.Text = "Print";
+            this.button_PrintTithe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_PrintTithe.UseVisualStyleBackColor = true;
+            this.button_PrintTithe.Click += new System.EventHandler(this.button_PrintCourse_Click);
             // 
-            // button_ManageCourse
+            // btn_ManageTithe
             // 
-            this.button_ManageCourse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_ManageCourse.FlatAppearance.BorderSize = 0;
-            this.button_ManageCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ManageCourse.ForeColor = System.Drawing.Color.Black;
-            this.button_ManageCourse.Location = new System.Drawing.Point(0, 40);
-            this.button_ManageCourse.Name = "button_ManageCourse";
-            this.button_ManageCourse.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button_ManageCourse.Size = new System.Drawing.Size(186, 40);
-            this.button_ManageCourse.TabIndex = 1;
-            this.button_ManageCourse.Text = "Manage Course";
-            this.button_ManageCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_ManageCourse.UseVisualStyleBackColor = true;
-            this.button_ManageCourse.Click += new System.EventHandler(this.button_ManageCourse_Click);
+            this.btn_ManageTithe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ManageTithe.FlatAppearance.BorderSize = 0;
+            this.btn_ManageTithe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ManageTithe.ForeColor = System.Drawing.Color.Black;
+            this.btn_ManageTithe.Location = new System.Drawing.Point(0, 40);
+            this.btn_ManageTithe.Name = "btn_ManageTithe";
+            this.btn_ManageTithe.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_ManageTithe.Size = new System.Drawing.Size(186, 40);
+            this.btn_ManageTithe.TabIndex = 1;
+            this.btn_ManageTithe.Text = "Manage Tithe";
+            this.btn_ManageTithe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ManageTithe.UseVisualStyleBackColor = true;
+            this.btn_ManageTithe.Click += new System.EventHandler(this.button_ManageCourse_Click);
             // 
             // button_NewTithe
             // 
@@ -367,6 +368,7 @@ namespace SchoolManagementSystem
             // 
             this.label_FemaleStd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_FemaleStd.AutoSize = true;
+            this.label_FemaleStd.BackColor = System.Drawing.Color.Transparent;
             this.label_FemaleStd.ForeColor = System.Drawing.Color.Black;
             this.label_FemaleStd.Location = new System.Drawing.Point(78, 38);
             this.label_FemaleStd.Name = "label_FemaleStd";
@@ -378,6 +380,7 @@ namespace SchoolManagementSystem
             // 
             this.label_maleStd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_maleStd.AutoSize = true;
+            this.label_maleStd.BackColor = System.Drawing.Color.Transparent;
             this.label_maleStd.ForeColor = System.Drawing.Color.Black;
             this.label_maleStd.Location = new System.Drawing.Point(7, 38);
             this.label_maleStd.Name = "label_maleStd";
@@ -389,6 +392,7 @@ namespace SchoolManagementSystem
             // 
             this.label_TotalStd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_TotalStd.AutoSize = true;
+            this.label_TotalStd.BackColor = System.Drawing.Color.Transparent;
             this.label_TotalStd.ForeColor = System.Drawing.Color.Black;
             this.label_TotalStd.Location = new System.Drawing.Point(7, 4);
             this.label_TotalStd.Name = "label_TotalStd";
@@ -419,11 +423,12 @@ namespace SchoolManagementSystem
             this.Controls.Add(this.panel_slide);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "United Evangelical Church";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_slide.ResumeLayout(false);
@@ -451,8 +456,8 @@ namespace SchoolManagementSystem
         private System.Windows.Forms.Panel panel_stdsubmenu;
         private System.Windows.Forms.Button button_Exit;
         private System.Windows.Forms.Panel panel_CourseSubMenu;
-        private System.Windows.Forms.Button button_PrintCourse;
-        private System.Windows.Forms.Button button_ManageCourse;
+        private System.Windows.Forms.Button button_PrintTithe;
+        private System.Windows.Forms.Button btn_ManageTithe;
         private System.Windows.Forms.Button button_NewTithe;
         private System.Windows.Forms.Button button_Course;
         private System.Windows.Forms.Button button_StdPrint;

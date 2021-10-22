@@ -11,12 +11,12 @@ using MySql.Data.MySqlClient;
 using DGVPrinterHelper;
 namespace SchoolManagementSystem
 {
-    public partial class printStudent : Form
+    public partial class printMember : Form
     {
         MemberClass student = new MemberClass();
         DGVPrinter printer = new DGVPrinter();
 
-        public printStudent()
+        public printMember()
         {
             InitializeComponent();
         }

@@ -48,6 +48,12 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            dataGridView_Members.Update();
+            dataGridView_Members.Refresh();
+        }
     } 
 }
      /*   bool Verify()

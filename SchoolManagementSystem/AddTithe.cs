@@ -14,14 +14,20 @@ namespace SchoolManagementSystem
     public partial class AddTithe : Form
     {
         DBConnect connect = new DBConnect();
-        CourseClass course = new CourseClass();
+        TitheClass course = new TitheClass();
         MemberClass member = new MemberClass();
         public string lname;
         public string fname;
         public AddTithe()
         {
             InitializeComponent();
-            LoadState();
+           // LoadState();
+           // LoadData();
+        }
+        public void LoadData()
+        {
+            Tithe_Table.DataSource = member.getTitheList();
+
         }
 
         private void btn_AddTithe_Click(object sender, EventArgs e)
@@ -37,24 +43,38 @@ namespace SchoolManagementSystem
                 string Church = cmb_Church.Text;
                 string Member = cmb_Member.Text;
                 DateTime Date = txt_Date.Value;
-                int amount = Convert.ToInt32(txt_Amount.Text);
+                string amount = txt_Amount.Text;
                 string remarks = txt_Remarks.Text;
                 string MemberId = txt_MemberId.Text;
 
                 try
                 {
-                    if (course.InsertTithe(State,SuperInt,Church,Member,MemberId,Date,amount,remarks))
+                    if (course.InsertTithe(State,SuperInt,Church,Member,MemberId,amount,Date,remarks))
                     {
-                        MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       // clear();
+                        MessageBox.Show("New Tithe Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       clear();
+                        Tithe_Table.DataSource = member.getTitheList();
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Add Tithe", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
+        }
+
+        private void clear()
+        {
+            txt_Amount.Clear();
+            txt_MemberId.Clear();
+            txt_Remarks.Clear();
+            cmb_State.SelectedIndex = -1;
+            cmb_SuperInt.SelectedIndex = -1;
+            cmb_Church.SelectedIndex = -1;
+            cmb_Member.SelectedIndex = -1;
+            
+            
         }
 
         private void cmb_State_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,95 +196,56 @@ namespace SchoolManagementSystem
             MySqlConnection con;
             MySqlCommand cmd;
             MySqlDataReader dr;
-
-            string[] names = cmb_Member.Text.Split(',');
-            string lname = names[0];
-            string fname = names[1];
-            foreach (string coma in names)
+            if (cmb_Member.Text == "")
             {
-                lname = names[0];
-                 fname = names[1];
+
             }
-            try
+            else
             {
-                con = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=church");
-                cmd = new MySqlCommand();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "SELECT MemberId FROM `members` WHERE FirstName = '" +fname+"' AND LastName = '" + lname + "'";
-
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
+                string[] names = cmb_Member.Text.Split(',');
+                string lname = names[0];
+                string fname = names[1];
+                foreach (string coma in names)
                 {
-                    
-                    txt_MemberId.Text = dr["MemberId"].ToString();
+                    lname = names[0];
+                    fname = names[1];
                 }
-                con.Close();
+                try
+                {
+                    con = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=church");
+                    cmd = new MySqlCommand();
+                    con.Open();
+                    cmd.Connection = con;
+                    cmd.CommandText = "SELECT MemberId FROM `members` WHERE FirstName = '" + fname + "' AND LastName = '" + lname + "'";
+
+                    dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+
+                        txt_MemberId.Text = dr["MemberId"].ToString();
+                    }
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    string msg = ex.Message;
+                }
             }
-            catch(Exception ex)
-            {
-                string msg = ex.Message;
-            }
-             
-             
+
             }
 
- 
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
 
+        private void AddTithe_Load(object sender, EventArgs e)
+        {
+            LoadState();
+            Tithe_Table.DataSource = member.getTitheList();
+        }
 
-
-
-
-        /* private void button_Add_Click(object sender, EventArgs e)
-           {
-               if (txtCoursename.Text == "" || txtHour.Text == "")
-               {
-                   MessageBox.Show("Need Course Data", "Field Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               }
-               else
-               {
-                   string cName = txtCoursename.Text;
-                   int chr = Convert.ToInt32(txtHour.Text);
-                   string desc = txtDescription.Text;
-                   try
-                   {
-                       if (course.InsertCourse(cName, chr, desc))
-                       {
-                           MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                           clear();
-                       }
-                   }
-                   catch (Exception ex)
-                   {
-                       MessageBox.Show(ex.Message, "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   }
-               }
-
-           }
-
-           private void button_clear_Click(object sender, EventArgs e)
-           {
-               clear();
-           }
-
-           private void clear()
-           {
-               txtCoursename.Clear();
-               txtDescription.Clear();
-               txtHour.Clear();
-           }
-
-
-           private void CourseForm_Load(object sender, EventArgs e)
-           {
-               showTable();
-           }
-
-           private void button_clear_Click_1(object sender, EventArgs e)
-           {
-
-           }
-        */
+      
     }
 }

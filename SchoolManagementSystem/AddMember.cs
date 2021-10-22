@@ -13,12 +13,11 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class RegisterMember : Form
+    public partial class AddMember : Form
     {
         MemberClass member = new MemberClass();
-        private string StateId;
-        private string SuperintId;
-        public RegisterMember()
+       
+        public AddMember()
         {
             InitializeComponent();
         }
@@ -202,30 +201,35 @@ namespace SchoolManagementSystem
             string church = church_cmb.Text;
             string position = txt_position.Text;
 
-            if (Verify())
+            DialogResult res = MessageBox.Show("Are you sure you want to save this new Member", "Add Member", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (DialogResult.Yes == res)
             {
-                try
+                if (Verify())
                 {
-                    // MemoryStream ms = new MemoryStream();
-                    //pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                    //byte[] img = ms.ToArray();
-                    if (member.insertMember(fname, mname, lname, bdate, origin, Dbop, phone, position, address, gender, churchState, supint, church))
+                    try
                     {
-                        MessageBox.Show("New Member Added", "New Member", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clearFields();
+                        // MemoryStream ms = new MemoryStream();
+                        //pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                        //byte[] img = ms.ToArray();
+                        if (member.insertMember(fname, mname, lname, bdate, origin, Dbop, phone, position, address, gender, churchState, supint, church))
+                        {
+                            MessageBox.Show("New Member Added", "New Member", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clearFields();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please input all required fields", "Add Member", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
-            {
-                MessageBox.Show("Please input all required fields","Add Member",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
-              
-            }
+
+        }
             
         
 

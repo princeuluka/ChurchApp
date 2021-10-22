@@ -1,7 +1,7 @@
 ﻿
 namespace SchoolManagementSystem
 {
-    partial class ManageCourse
+    partial class ManageTithe
     {
         /// <summary>
         /// Required designer variable.

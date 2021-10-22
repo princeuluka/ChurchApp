@@ -9,23 +9,28 @@ using System.Threading.Tasks;
 
 namespace SchoolManagementSystem
 {
-    class CourseClass
+    class TitheClass
     { 
         DBConnect connect = new DBConnect();
 
-        public bool InsertTithe(string State, string SuperInt, string Church, string Member,string MemberId, DateTime Date, int amount, string remarks)
+        public bool InsertTithe(string State, string SuperInt, string Church, string Member,string MemberId, string amount, DateTime Date, string remarks)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `tithe`(`State`, `Superintendency`, `Church`, `Member`,`MemberId`,`Amount`,`Date`, `Remarks`) VALUES (@st,@si,@ch,@me,@mi,@dt,@am,@re)",connect.getConnection);
+            //MySqlCommand command = new MySqlCommand(" INSERT INTO `tithe` (`State`, `Superintendency`, `Church`, `Member`, `MemberId`, `Amount`, `Date`, `Remarks`)  VALUES " +
+               // "('"+State+ "','" + SuperInt + "','" + Church + "','" + Member + "','" + MemberId + "','" + amount + "','" + Date + "','" + remarks + "')", connect.getConnection);
 
-            command.Parameters.Add("@st",MySqlDbType.VarChar).Value = State;
-            command.Parameters.Add("@si", MySqlDbType.VarChar).Value = SuperInt;
-            command.Parameters.Add("@ch", MySqlDbType.VarChar).Value = Church;
-            command.Parameters.Add("@me", MySqlDbType.VarChar).Value = Member;
-            command.Parameters.Add("@mi", MySqlDbType.VarChar).Value = MemberId;
-            command.Parameters.Add("@dt", MySqlDbType.DateTime).Value = Date;
-            command.Parameters.Add("@am", MySqlDbType.Int32).Value = amount;
-            command.Parameters.Add("@re", MySqlDbType.VarChar).Value = remarks;
 
+            MySqlCommand command = new MySqlCommand (" INSERT INTO `tithe` (`State`, `Superintendency`, `Church`, `Member`, `MemberId`, `Amount`, `Date`, `Remarks`)"+
+               " VALUES(@st, @si, @ch, @me, @mi, @am, @dt, @re)", connect.getConnection);
+            
+             command.Parameters.Add("@st",MySqlDbType.VarChar).Value = State;
+             command.Parameters.Add("@si", MySqlDbType.VarChar).Value = SuperInt;
+             command.Parameters.Add("@ch", MySqlDbType.VarChar).Value = Church;
+             command.Parameters.Add("@me", MySqlDbType.VarChar).Value = Member;
+             command.Parameters.Add("@mi", MySqlDbType.VarChar).Value = MemberId;
+             command.Parameters.Add("@am", MySqlDbType.VarChar).Value = amount;
+             command.Parameters.Add("@dt", MySqlDbType.Date).Value = Date;
+             command.Parameters.Add("@re", MySqlDbType.VarChar).Value = remarks;
+            
             connect.openConnect();
 
             if(command.ExecuteNonQuery() == 1)
@@ -40,9 +45,9 @@ namespace SchoolManagementSystem
             }
         }
 
-        public DataTable getCourseList()
+        public DataTable getTitheList()
         {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `members`", connect.getConnection);
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tithe`", connect.getConnection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

@@ -29,7 +29,7 @@ namespace SchoolManagementSystem
             command.Parameters.Add("@gn", MySqlDbType.VarChar).Value = gender;
             command.Parameters.Add("@soo", MySqlDbType.VarChar).Value = origin;
             command.Parameters.Add("@adr", MySqlDbType.VarChar).Value = address;
-            command.Parameters.Add("@dop", MySqlDbType.VarChar).Value = Dbop;
+            command.Parameters.Add("@dop", MySqlDbType.Date).Value = Dbop;
             command.Parameters.Add("@po", MySqlDbType.VarChar).Value = position;
             command.Parameters.Add("@ph", MySqlDbType.VarChar).Value = phone;
             
@@ -53,6 +53,15 @@ namespace SchoolManagementSystem
         public DataTable getMembersList()
         {
             MySqlCommand command = new MySqlCommand("SELECT MemberId,FirstName,MiddleName, LastName,DOB, Gender,Address,DateOfBaptism, Position,Phone FROM `members`" , connect.getConnection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+        public DataTable getTitheList()
+        {
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tithe`", connect.getConnection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -100,6 +109,15 @@ namespace SchoolManagementSystem
         public DataTable SearchMember(string SearchData)
         {
             MySqlCommand command = new MySqlCommand("SELECT * FROM `members` WHERE CONCAT(`FirstName`,`LastName`,`Address`) LIKE '%"+SearchData+"%'", connect.getConnection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+        public DataTable SearchTithe(string SearchData)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `tithe` WHERE CONCAT(`Church`,`Member`) LIKE '%" + SearchData + "%'", connect.getConnection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

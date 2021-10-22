@@ -69,7 +69,7 @@ namespace SchoolManagementSystem
         #region StdSubMenu
         private void button_StdRegistration_Click(object sender, EventArgs e)
         {
-            openChildForm(new RegisterMember());
+            openChildForm(new AddMember());
             //...
             //... Your Code
             //...
@@ -96,7 +96,7 @@ namespace SchoolManagementSystem
 
         private void button_StdPrint_Click(object sender, EventArgs e)
         {
-            openChildForm(new printStudent());
+            openChildForm(new printMember());
             //...
             //... Your Code
             //...
@@ -120,7 +120,7 @@ namespace SchoolManagementSystem
 
         private void button_ManageCourse_Click(object sender, EventArgs e)
         {
-            openChildForm(new ManageCourse());
+            openChildForm(new ManageTithe());
             //...
             //... Your Code
             //...
@@ -129,7 +129,7 @@ namespace SchoolManagementSystem
 
         private void button_PrintCourse_Click(object sender, EventArgs e)
         {
-            openChildForm(new PrintCourse());
+            openChildForm(new PrintTithe());
             //...
             //... Your Code
             //...

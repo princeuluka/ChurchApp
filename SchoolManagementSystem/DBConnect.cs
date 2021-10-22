@@ -10,7 +10,6 @@ namespace SchoolManagementSystem
     class DBConnect
     {
         MySqlConnection connect = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=church");
-
         public MySqlConnection getConnection
         {
             get

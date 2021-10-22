@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class ManageCourse : Form
+    public partial class ManageTithe : Form
     {
-        CourseClass course = new CourseClass();
-        public ManageCourse()
+        TitheClass course = new TitheClass();
+        public ManageTithe()
         {
             InitializeComponent();
         }
